@@ -1,0 +1,27 @@
+From dcbae6588971a3f650508c86c1e7b73aa8ea7153 Mon Sep 17 00:00:00 2001
+From: Michael Simacek <msimacek@redhat.com>
+Date: Fri, 23 Sep 2016 12:44:04 +0200
+Subject: [PATCH] Unshade alpn-api
+
+---
+ alpn-boot/pom.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/alpn-boot/pom.xml b/alpn-boot/pom.xml
+index 88eaa36..761a0b9 100644
+--- a/alpn-boot/pom.xml
++++ b/alpn-boot/pom.xml
+@@ -55,8 +55,8 @@
+                         </goals>
+                         <configuration>
+                             <instructions>
+-                                <Export-Package>org.eclipse.jetty.alpn;sun.security.ssl;version="${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}"</Export-Package>
+-                                <Import-Package>!sun.*,</Import-Package>
++                                <Export-Package>sun.security.ssl;version="${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}"</Export-Package>
++                                <Import-Package>!sun.*,org.eclipse.jetty.alpn</Import-Package>
+                                 <_nouses>true</_nouses>
+                             </instructions>
+                         </configuration>
+-- 
+2.7.4
+
